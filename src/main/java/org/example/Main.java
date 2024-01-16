@@ -9,9 +9,7 @@ import java.io.File;
 public class Main {
     public static void main(String[] args) {
 
-
             ChromeOptions options = new ChromeOptions();
-
             WebDriver driver = new ChromeDriver(options);
 
             options.addExtensions(new File("./extension/TrustWallet.crx"));
