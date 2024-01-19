@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import utils.basePage;
 import utils.logger;
 
+import java.time.Duration;
+
 public class importWalletPage extends basePage {
 
 
@@ -13,8 +15,7 @@ public class importWalletPage extends basePage {
     public importWalletPage(final WebDriver driver) {
         super(driver);
     }
-   WebElement import_wallet = driver.findElement(By.xpath("//*[ contains(text(),'Create a new wallet')] "));
-
+   WebElement import_wallet = driver.findElement(By.xpath("//*[ contains(text(),'Import or recover wallet')]"));
 
 
     public String clickImportWallet() {
@@ -44,7 +45,6 @@ public class importWalletPage extends basePage {
 //                WebElement Openwallet_btn = driver.findElement(By.xpath("//button[ contains(text(),'Open wallet')] "));
 //                Openwallet_btn.click();
 //
-//                driver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS) ;
 //
 //                WebElement Gotit_btn = driver.findElement(By.xpath("//button[ contains(text(),'Got it')] "));
 //                //Gotit_btn.click();

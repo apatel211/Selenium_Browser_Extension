@@ -29,7 +29,7 @@ public class testRunner {
         logger.startTestCase("Import or recover wallet successfully ");
 
         final importWalletPage iw = new importWalletPage(driver);
-        Assert.assertEquals(iw.clickImportWallet(), "Create a new wallet");
+        Assert.assertEquals(iw.clickImportWallet(), "Import or recover wallet");
 
         logger.endTestCase("Test case executed successfully ");
 
