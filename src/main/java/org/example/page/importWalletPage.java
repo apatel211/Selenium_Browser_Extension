@@ -13,17 +13,15 @@ public class importWalletPage extends basePage {
     public importWalletPage(final WebDriver driver) {
         super(driver);
     }
-   WebElement import_wallet = driver.findElement(By.xpath("//*[ contains(text(),'Import or recover wallet')] "));
-    
+   WebElement import_wallet = driver.findElement(By.xpath("//*[ contains(text(),'Create a new wallet')] "));
 
 
 
-    public void  importWallet(final WebDriver driver) {
-//        final boolean messageText = wait.until(visibilityOfElementLocated(this.GetStartedButton)).isEnabled();
-//        final WebElement getStartedElement = wait.until(visibilityOfElementLocated(this.GetStartedButton));
-        logger.info("Get started page open successfully ");
+    public String clickImportWallet() {
+        final String messageText = import_wallet.getText();
+        logger.info("Click on import wallet page succesfully ");
         import_wallet.click();
-//        return messageText;
+        return messageText;
     }
 
 
