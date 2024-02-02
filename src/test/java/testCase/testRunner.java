@@ -1,5 +1,6 @@
 package testCase;
 
+import org.example.page.setPasswordPage;
 import org.testng.Assert;
 import utils.logger;
 import org.openqa.selenium.WebDriver;
@@ -30,7 +31,8 @@ public class testRunner {
 
         final importWalletPage iw = new importWalletPage(driver);
         Assert.assertEquals(iw.clickImportWallet(), "Import or recover wallet");
-        Assert.assertEquals( iw.enterPasswordAndConfirmPassword(), "Set Password");
+        final setPasswordPage sp = new setPasswordPage(driver);
+        Assert.assertEquals( sp.enterPasswordAndConfirmPassword(), "Set Password");
 
         logger.endTestCase("Test case executed successfully ");
 
