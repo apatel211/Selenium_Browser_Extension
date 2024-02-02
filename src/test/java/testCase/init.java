@@ -9,8 +9,6 @@ import java.io.File;
 import java.time.Duration;
 import java.util.ArrayList;
 
-
-
 public class init {
 
     public static WebDriver initDriver() {
@@ -23,16 +21,16 @@ public class init {
         try{
             driver.get("chrome-extension://egjidjbpglichdcondbcbdnbeeppgdph/home.html#/onboarding");
 
-            ArrayList<String> newTb = new ArrayList<>(driver.getWindowHandles());
+            ArrayList<String> newTab = new ArrayList<>(driver.getWindowHandles());
             driver.manage().window().maximize();
 
-            driver.switchTo().window(newTb.get(0));
+            driver.switchTo().window(newTab.get(0));
 
         } catch (Exception e){
             e.printStackTrace();
         }
 
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
         return driver;
     }
 
